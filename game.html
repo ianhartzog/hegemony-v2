@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Play Hegemony</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <style>
+        	body{
+      			font-family: 'Audiowide';
+      			background-image:url('img/2740_web_2.jpg');		
+				background-position: center;
+				background-repeat:no-repeat;
+        	}
+        	.buttons {
+        		display: block;
+      			margin-top:10px;
+				margin-bottom:10px;
+				margin-right:auto;
+				margin-left:auto;
+        		font-family: 'Audiowide';
+				width: 25em;
+				height: 35px;
+			}
+			
+        	.system {
+        		display: block;
+      			margin-top:10px;
+				margin-bottom:10px;
+				margin-right:auto;
+				margin-left:auto;
+        		font-family: Times,'Audiowide';
+        	}
+
+        	h1{
+				text-align:left;
+				color: #FFFFFF;
+        	}
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
+			
+			#build{
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -12.5em;
+			}
+			
+			#nextday{
+				position: absolute;
+				top: 0;
+				right: 10px;
+			}
+
+			#nextweek{
+				position: absolute;
+				top: 45px;
+				right: 10px;
+			}
+
+			#research{
+				position: absolute;
+				top: 45px;
+				left: 50%;
+				margin-left: -12.5em;
+			}
+
+			#ships{
+				position: absolute;
+				top: 90px;
+				right: 10px;
+			}
+
+			#menu{
+				position: absolute;
+				bottom: 0px;
+				left: 10px;
+			}
+
+			#xeno{
+				position: absolute;
+				bottom: 50px;
+				left: 50px;
+			}
+			
+			.border-red{
+				border: 1px solid red;
+				
+			}
+			
+			.border-blue{
+				border: 1px solid blue;
+				
+			}
+        </style>
+        <script>
+        	// A $( document ).ready() block.
+			$( document ).ready(function() {
+				
+    			console.log( "ready!" );
+    			
+				$( "#dialog-modal" ).dialog({
+					width: 500,
+					autoOpen: false,
+					modal: true
+				});
+				
+				$( "#build" )
+     			.click(function() {
+        			$( "#dialog-modal" ).dialog( "open" );
+				});
+
+				$( "#dialog-modal2" ).dialog({
+					width: 500,
+					autoOpen: false,
+					modal: true
+				});
+				
+				$( "#research" )
+     			.click(function() {
+        			$( "#dialog-modal2" ).dialog( "open" );
+				});
+
+				$( "#dialog-modal3" ).dialog({
+					width: 500,
+					autoOpen: false,
+					modal: true
+				});
+				
+				$( "#ships" )
+     			.click(function() {
+        			$( "#dialog-modal3" ).dialog( "open" );
+				});
+				
+				$("#xeno")
+				.hover(function () {
+					$(this).removeClass("border-blue").addClass("border-red");
+				  },
+				  function () {
+			    	$(this).removeClass("border-red").addClass("border-blue");
+				  });
+				  
+				$("#xeno").addClass("border-blue");
+
+			});
+        </script>
+<!--
+					.hover(function () {
+			    	$(this).addClass("border-blue").removeClass("border-red");
+				  },
+				  function () {
+			    	$(this).removeClass("border-red").addClass("border-blue");
+				  });
+-->        
+        
+        
+    </head>
+    <body>
+        <h1>Hegemony</h1>
+        <button class="buttons" id="build">Build...</button>
+        <button class="buttons" id="nextday">Next Day -></button>
+        <button class="buttons" id="nextweek">Next Week ->></button>
+        <button class="buttons" id="research">Research...</button>
+        <button class="buttons" id="ships">Ships...</button>
+        <a href="index.html"><button class="buttons" id="menu">Menu</button></a>
+        <button class="system" id="xeno">Xeno System</button>
+
+
+<div id="dialog-modal" title="Build">
+  <p style="font-family: 'Audiowide';">Ships:</p>
+  <button class="buttons" style="font-family: 'Audiowide';">Small</button>
+  <button class="buttons" style="font-family: 'Audiowide';">Medium</button>
+  <button class="buttons" style="font-family: 'Audiowide';">Large</button>
+  <button class="buttons" style="font-family: 'Audiowide';">Huge</button>
+</div>
+
+<div id="dialog-modal2" title="Research">
+  <p style="font-family: 'Audiowide';">Research:</p>
+  <button class="buttons" style="font-family: 'Audiowide';">Better Engines</button>
+  <button class="buttons" style="font-family: 'Audiowide';">Better Mining</button>
+  <button class="buttons" style="font-family: 'Audiowide';">Better Ship Hulls</button>
+  <button class="buttons" style="font-family: 'Audiowide';">Better Weapons</button>
+</div>
+
+<div id="dialog-modal3" title="Ships">
+  <p style="font-family: 'Audiowide';">Ships:</p>
+
+</div>
+        
+    </body>
+</html>
